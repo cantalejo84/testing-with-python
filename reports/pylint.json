@@ -1,0 +1,189 @@
+[
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "",
+        "line": 61,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "line-too-long",
+        "message": "Line too long (114/100)",
+        "message-id": "C0301"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "",
+        "line": 1,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "missing-module-docstring",
+        "message": "Missing module docstring",
+        "message-id": "C0114"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "get_data",
+        "line": 9,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "missing-function-docstring",
+        "message": "Missing function or method docstring",
+        "message-id": "C0116"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "get_prefix_data",
+        "line": 13,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "missing-function-docstring",
+        "message": "Missing function or method docstring",
+        "message-id": "C0116"
+    },
+    {
+        "type": "warning",
+        "module": "src.main",
+        "obj": "enrich_data",
+        "line": 19,
+        "column": 8,
+        "path": "src/main.py",
+        "symbol": "redefined-builtin",
+        "message": "Redefining built-in 'id'",
+        "message-id": "W0622"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "enrich_data",
+        "line": 17,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "missing-function-docstring",
+        "message": "Missing function or method docstring",
+        "message-id": "C0116"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "enrich_data",
+        "line": 19,
+        "column": 8,
+        "path": "src/main.py",
+        "symbol": "invalid-name",
+        "message": "Variable name \"id\" doesn't conform to snake_case naming style",
+        "message-id": "C0103"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "persist_dynamodb",
+        "line": 31,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "missing-function-docstring",
+        "message": "Missing function or method docstring",
+        "message-id": "C0116"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "persist_s3",
+        "line": 35,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "missing-function-docstring",
+        "message": "Missing function or method docstring",
+        "message-id": "C0116"
+    },
+    {
+        "type": "warning",
+        "module": "src.main",
+        "obj": "lambda_handler",
+        "line": 42,
+        "column": 19,
+        "path": "src/main.py",
+        "symbol": "redefined-outer-name",
+        "message": "Redefining name 'event' from outer scope (line 61)",
+        "message-id": "W0621"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "lambda_handler",
+        "line": 42,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "missing-function-docstring",
+        "message": "Missing function or method docstring",
+        "message-id": "C0116"
+    },
+    {
+        "type": "warning",
+        "module": "src.main",
+        "obj": "lambda_handler",
+        "line": 57,
+        "column": 11,
+        "path": "src/main.py",
+        "symbol": "broad-except",
+        "message": "Catching too general exception Exception",
+        "message-id": "W0703"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "lambda_handler",
+        "line": 57,
+        "column": 4,
+        "path": "src/main.py",
+        "symbol": "invalid-name",
+        "message": "Variable name \"e\" doesn't conform to snake_case naming style",
+        "message-id": "C0103"
+    },
+    {
+        "type": "warning",
+        "module": "src.main",
+        "obj": "lambda_handler",
+        "line": 42,
+        "column": 26,
+        "path": "src/main.py",
+        "symbol": "unused-argument",
+        "message": "Unused argument 'context'",
+        "message-id": "W0613"
+    },
+    {
+        "type": "warning",
+        "module": "src.main",
+        "obj": "",
+        "line": 1,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "unused-import",
+        "message": "Unused import os",
+        "message-id": "W0611"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "",
+        "line": 4,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "wrong-import-order",
+        "message": "standard import \"from typing import Dict\" should be placed before \"import boto3\"",
+        "message-id": "C0411"
+    },
+    {
+        "type": "convention",
+        "module": "src.main",
+        "obj": "",
+        "line": 6,
+        "column": 0,
+        "path": "src/main.py",
+        "symbol": "wrong-import-order",
+        "message": "standard import \"from datetime import datetime\" should be placed before \"import boto3\"",
+        "message-id": "C0411"
+    }
+]
