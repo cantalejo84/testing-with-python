@@ -13,6 +13,7 @@
 .idea/**/dictionaries
 .idea/**/shelf
 .idea
+xunit-report.xml
 
 # Generated files
 .idea/**/contentModel.xml
