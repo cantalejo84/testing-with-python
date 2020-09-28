@@ -24,16 +24,17 @@ moto==1.3.16
 *pytest-cov*: Herramienta para comprobar la cobertura de nuestro código  
 *mock*: Framework para el mockeo de componentes externos  
 *pytest-mock*: Integración de mock con pytest  
-*bandit*: Herramienta para comprobar la seguridad de nuestro código
+*bandit*: Herramienta para comprobar la seguridad de nuestro código  
 *moto*: Libreria que permite testear mockeando servicios de AWS 
 
 **Paso 3**  
-TOX  
+Fichero tox.ini  
 Tox es una herramienta de linea de comandos de gestión de virualenvs y tests, se puede usar para:    
 - Comprobar que su paquete se instala correctamente con diferentes versiones e intérpretes de Python  
 - Ejecuntar pruebas en cada uno de los entorne con la herramienta de test de su elección (pytest, unittest, etc.)
-- Actuando como un frontend para los servidores de CI, y fusionando las pruebas de CI y las basadas en shell.  
-Tox se configura en un archivo llamado *tox.ini en la raiz del proyecto, a continuación un ejemplo.
+- Actuando como un frontend para los servidores de CI, y fusionando las pruebas de CI y las basadas en shell.
+  
+Tox se configura en un archivo llamado *tox.ini* en la raiz del proyecto, a continuación un ejemplo.
 ````
 [tox]
 envlist = py3
