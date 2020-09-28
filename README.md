@@ -17,6 +17,7 @@ pytest-cov==2.8.1
 mock==4.0.2
 pytest-mock==3.2.0
 bandit==1.6.2
+moto==1.3.16
 ````
 
 **pytest**: Herramienta para poder ejecutar tests  
@@ -24,6 +25,7 @@ bandit==1.6.2
 **mock**: Framework para el mockeo de componentes externos  
 **pytest-mock**: Integración de mock con pytest  
 **bandit**: Herramienta para comprobar la seguridad de nuestro código
+**moto**: Libreria que permite testear mockeando servicios de AWS 
 
 **Paso 3**  
 Creamos fichero *tox.ini* que nos permite lanzar las anteriores herramientas con el suguiente contenido:
@@ -33,23 +35,18 @@ Creamos fichero *tox.ini* que nos permite lanzar las anteriores herramientas con
 envlist = py3
 skipsdist = True
 
-[testenv:pytests]
+[testenv]
 deps =
     -r{toxinidir}/requirements.txt
     -r{toxinidir}/test_requirements.txt
+
 commands =
-    pytest --junitxml xunit.xml --cov-report xml --cov <SOURCE_CODE_PATH> -vv
+    pytest  --cov-report xml --cov-report html --junitxml xunit-report.xml --cov src.main
+    bandit -r src/ -f json -o reports/bandit.json
 
 [pytest]
 testpaths = tests
 junit_family = xunit1
-
-[testenv:bandit]
-deps =
-    -r{toxinidir}/requirements.txt
-    -r{toxinidir}/test_requirements.txt
-
-commands = bandit -r -f json -o reports/bandit.json <SOURCE_CODE_PATH>
 ````
 
 
@@ -70,7 +67,8 @@ Gracias a esta configuración podemos ejecutar directamente Tox en nuestro termi
  
 **Paso 4**  
 Instalar PyLint  
-Pylint es es un verificador de código fuente, errores y calidad para el lenguaje de programación Python
+Pylint es es un verificador de código fuente, errores y calidad para el lenguaje de programación Python.  
+(PyLint no se puede integrar con Tox en este momento. Por ello, es necesario ejecutarlo por separado)
 
 ```bash
     $ pip install pylint
@@ -121,6 +119,15 @@ src/
 tests/
 | - [FICHEROS DE TEST]
     | 
+test_requirements.txt
+tox.ini
 ````
 
 *Ficheros de test deben tener el prefijo test_ en su nombre*
+
+**Paso 7**  
+Fichero conftest.py
+
+Las "fixtures" de Pytest son el uso habitual de conftest.py. Las "fixture" que se definan se compartirán entre todos los tests.  
+En este caso se utiliza para definir recursos de AWS que serán utilizados durante los tests
+
